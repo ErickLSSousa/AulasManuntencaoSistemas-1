@@ -1,0 +1,10 @@
+{
+  "name": "sistema-usuarios",
+  "version": "1.0.0",
+  "description": "Sistema simples de gerenciamento de usuários (com bugs intencionais)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}
