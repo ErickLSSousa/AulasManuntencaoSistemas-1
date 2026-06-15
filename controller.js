@@ -21,7 +21,6 @@ function handleCheckout(userId, cartItems) {
 
 // BUG #3 — UnhandledPromiseRejection
 // A função retorna uma Promise que pode rejeitar, mas quem a chama
-// (index.js) não encadeia um .catch() para tratar o erro.
 function processarPedido(userId, cart) {
   return new Promise((resolve, reject) => {
     console.log(`[controller] Processando pedido assíncrono...`);

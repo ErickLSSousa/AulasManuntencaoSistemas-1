@@ -11,9 +11,12 @@ const database = {
 function findUserById(id) {
   console.log(`[database] Buscando usuário com id=${id}...`);
 
-  // BUG #1 — ReferenceError: 'databse' is not defined
-  // O programador escreveu 'databse' em vez de 'database'.
   const result = database.users.find(user => user.id === id);
+
+  // BUG #1 CORRIGIDO: quando o usuário não existe, result é undefined.
+  if (!result) {
+    throw new Error(`Usuário com id=${id} não encontrado`);
+  }
 
   return result;
 }
